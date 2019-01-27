@@ -41,7 +41,7 @@ The Update-AzPowerBIEmbeddedCapacity cmdlet modifies an instance of PowerBI Embe
 
 ### Example 1
 ```
-PS C:\> Update-AzPowerBIEmbeddedCapacity -Name "testcapacity" -Tag @{"key1" = "value1";"key2" = "value2"} -Administrator "testuser1@contoso.com, testuser2@contoso.com" -PassThru
+PS C:\> Update-AzPowerBIEmbeddedCapacity -Name "testcapacity" -Tag @{"key1" = "value1";"key2" = "value2"} -Administrator "testuser1@contoso.com", "testuser2@contoso.com" -PassThru
 Type                   : Microsoft.PowerBIDedicated/capacities
 Id                     : /subscriptions/78e47976-.../resourceGroups/testRG/providers/Microsoft.PowerBIDedicated/capacities/testcapacity
 ResourceGroup          : testRG
@@ -54,12 +54,12 @@ Tier                   : PBIE_Azure
 Tag                    : {[key1, value1], [key2, value2]}
 ```
 
-Modifies the capacity named testcapacity in resourcegroup testgroup to set the tags as key1:value1 and key2:value2 and administrator to testuser1@contoso.com
+Modifies the capacity named testcapacity in resourcegroup testgroup to set the tags as key1:value1 and key2:value2 and administrator to testuser1@contoso.com and testuser2@contoso.com
 
 ## PARAMETERS
 
 ### -Administrator
-A comma separated capacity names to set as administrator on the capacity
+A comma separated names to set as administrator on the capacity
 
 ```yaml
 Type: System.String[]
